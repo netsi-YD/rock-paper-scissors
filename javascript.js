@@ -15,3 +15,27 @@ function getHumanChoice() {
   return choice;
 }
 console.log(getHumanChoice());
+let humanScore = 0;
+let computerScore = 0;
+function playRound(humanChoice, computerChoice) {
+  const human = humanChoice.toLowerCase();
+
+  if (human === computerChoice) {
+    console.log(`It's a draw! Both chose ${human}`);
+    return;
+  }
+
+  const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+  };
+
+  if (winConditions[human] === computerChoice) {
+    humanScore++;
+    console.log(`You win! ${human} beats ${computerChoice}`);
+  } else {
+    computerScore++;
+    console.log(`You lose! ${computerChoice} beats ${human}`);
+  }
+}
