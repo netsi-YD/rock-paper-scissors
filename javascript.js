@@ -1,15 +1,11 @@
-//function getComputerChoice(num){
+function getComputerChoice() {
+  const randomNum = Math.random();
 
-//}
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  if (randomNum < 1 / 3) {
+    return "rock";
+  } else if (randomNum < 2 / 3) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
 }
-
-console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
-
-console.log(getRandomInt(1));
-// Expected output: 0
-
-console.log(Math.random());
-// Expected output: a number from 0 to <1
