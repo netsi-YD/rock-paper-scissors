@@ -9,3 +9,4 @@ function getComputerChoice() {
     return "scissors";
   }
 }
+console.log(getComputerChoice());
